@@ -1,0 +1,82 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "280bf30d-cc2a-3f67-beb3-47f720588867",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "feb87ce9-0190-1000-ffff-ffffc9fd67ee",
+        "labels" : [ ],
+        "name" : "sec",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 360.0,
+          "y" : 40.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-parquet-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.26.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "280bf30d-cc2a-3f67-beb3-47f720588867",
+          "identifier" : "733677a7-289b-3f94-bc3f-def91a7b7c87",
+          "instanceIdentifier" : "feb88cb4-0190-1000-0000-00002ff91916",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CalculateParquetRowGroupOffsets",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 345.0,
+            "y" : 83.0
+          },
+          "properties" : {
+            "Zero Content Output" : "false"
+          },
+          "propertyDescriptors" : {
+            "Zero Content Output" : {
+              "displayName" : "Zero Content Output",
+              "identifiesControllerService" : false,
+              "name" : "Zero Content Output",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.parquet.CalculateParquetRowGroupOffsets",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { },
+      "parameterProviders" : { }
+    }
+  }
+}
